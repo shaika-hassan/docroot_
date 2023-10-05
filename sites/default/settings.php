@@ -712,7 +712,7 @@ $settings['container_yamls'][] = $app_root . '/' . $site_path . '/services.yml';
  * \Drupal\Component\Serialization\SerializationInterface interface.
  */
 # $settings['yaml_parser_class'] = NULL;
-
+$settings['trusted_host_patterns'] = ['^localhost$'];
 /**
  * Trusted host configuration.
  *
@@ -872,4 +872,8 @@ $databases['default']['default'] = array (
   'driver' => 'mysql',
   'autoload' => 'core/modules/mysql/src/Driver/Database/mysql/',
 );
-$settings['config_sync_directory'] = 'sites/default/files/config_X0X4fsBlj5v6c6qEOY4jUEkBpXB9qkoo0P9bHZwTwNijpjvTLAu7VH4AiMigplqQuyzMckGdNQ/sync';
+$settings['config_sync_directory'] = 'sites/default/custom-sync';
+
+
+$config['system.site']['name']= "development site";
+
